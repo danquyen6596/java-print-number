@@ -3,26 +3,26 @@ package vn.codegym.QuyenLeSy;
 public class PrintTree {
     public static void main(String[] args) {
 
-        int num1 = 0;
-        int num2 = 0;
+        for (int i = 0;i <= 100;i++)
+        {
+            if (i % 5 == 0)
+            {
+                System.out.println("-->" + i);
 
-        for (int i = 1; i <= 100; i++){
-            if(i%5==0) {
-                num1 = i;
-                System.out.println("- " + num1);
-                int j = num1;
-                boolean check = false;
-                while (check==false) {
-                    j++;
-                    if (j % 5 == 0) {
-                        num2 = j;
-                        check = true;
+                int j = i + 1;
+
+                while (j % 5 != 0)
+                {
+                    if (j % 2 == 0)
+                    {
+                        System.out.println("------" + j);
                     }
-                }
 
-                for (int k = num1+1; k < num2; k++) {
-                    if (k % 2 == 0) {
-                        System.out.println("\t+ " + k);
+                    j++;
+
+                    if (j % 2 == 0 && j % 5 == 0)
+                    {
+                        System.out.println("------" + j);
                     }
                 }
             }
